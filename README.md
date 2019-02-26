@@ -62,29 +62,29 @@ Expose the following end points
 - [x] GET /orders - return all the orders
 - [x] GET /agents - return all the agents
 
-- [ ] GET /customers/custcode/{custcode}
-- [ ] GET /orders/ordnum/{ordnum}
-- [ ] GET /agents/agentcode/{agentcode}
+- [x] GET /customers/{id}
+- [ ] GET /orders/{id}
+- [ ] GET /agents/{id}
 
 - [ ] POST /customers - adds a customer
 - [ ] POST /orders - adds an order
 - [ ] POST /agents - adds an agent
 
-- [ ] PUT /customers/custocode/{custcode} - updates a customer based on custcode
-- [ ] PUT /orders/ordnum/{ordnum} - updates an order based on ordnum
-- [ ] PUT /agents/agentcode/{agentcode} - updates an agent based on ordnum
+- [ ] PUT /customers/{id} - updates a customer based on custcode
+- [ ] PUT /orders/{id} - updates an order based on ordnum
+- [ ] PUT /agents/{id} - updates an agent based on ordnum
 
-- [ ] DELETE /customers/custcode/{custcode} - Deletes a customer based off of their custcode and deletes all their associated orders
-- [ ] DELETE /orders/ordnum/{ordnum} - deletes an order based off its ordnum
-- [ ] DELETE agents/agentcode/{agentcode} - Deletes an agent if they are not assigned to a customer or order (Stretch Goal)
+- [ ] DELETE /customers/{id} - Deletes a customer based off of their custcode and deletes all their associated orders
+- [ ] DELETE /orders/{id} - deletes an order based off its ordnum
+- [ ] DELETE /agents/{id} - Deletes an agent if they are not assigned to a customer or order (Stretch Goal)
 
-- [ ] /customers/order - Returns all customers with their orders
-- [ ] /customers/name/{custname} - Returns all orders for a particular customer based on name
-- [ ] /customers/order/{custcode} - Returns all orders for a particular customer based on custcode
-- [ ] /agents/customers - Returns all agents with their customers
-- [ ] /agents/orders - Return a list with the agents name and associated order number and order description
-- [ ] /customers/{custcode} - Deletes a customer based off of their custcode and deletes all their associated orders
-- [ ] /agents/{agentcode} - Deletes an agent if they are not assigned to a customer or order (Stretch Goal)
+- [ ] GET /customers/orders - Returns all customers with their orders
+- [ ] GET /customers/{name} - Returns all orders for a particular customer based on name
+- [ ] GET /customers/{id}/orders - Returns all orders for a particular customer based on custcode
+- [ ] GET /agents/customers - Returns all agents with their customers
+- [ ] GET /agents/orders - Return a list with the agents name and associated order number and order description
+- [ ] DELETE /customers/{id} - Deletes a customer based off of their custcode and deletes all their associated orders
+- [ ] DELETE /agents/{id} - Deletes an agent *if they are not assigned to a customer or order* (Stretch Goal)
 
 * Expose at least the following the actuator endpoints to help with system mangagement
    - [ ] /health

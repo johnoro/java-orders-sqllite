@@ -5,6 +5,7 @@ import com.lambdaschool.sqliteorders.repositories.CustomerRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -19,5 +20,14 @@ public class CustomerController {
   @GetMapping("")
   public List<Customer> all() {
     return repository.findAll();
+  }
+
+  @GetMapping("{id}")
+  public Customer oneById(@PathVariable Long id) {
+    var found = repository.findById(id);
+    if (found.isPresent()) {
+      return found.get();
+    }
+    return null;
   }
 }
