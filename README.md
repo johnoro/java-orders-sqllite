@@ -38,7 +38,7 @@ The table layouts are as follows
   * PHONE String
   * AGENTCODE long foreign key (one agent to many customers) not null
 
-- [ ] ORDERS
+- [x] ORDERS
   * ORDNUM primary key, not null Long
   * ORDAMOUNT double
   * ADVANCEAMOUNT double
