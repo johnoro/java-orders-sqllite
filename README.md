@@ -66,7 +66,7 @@ Expose the following end points
 - [ ] GET /orders/{id}
 - [ ] GET /agents/{id}
 
-- [ ] POST /customers - adds a customer
+- [x] POST /customers - adds a customer
 - [ ] POST /orders - adds an order
 - [ ] POST /agents - adds an agent
 
