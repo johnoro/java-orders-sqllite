@@ -32,4 +32,16 @@ public class CustomerController {
   public Customer add(@RequestBody Customer customer) {
     return repository.save(customer);
   }
+
+  @PutMapping("{id}")
+  public Customer update(@RequestBody Customer customer, @PathVariable Long id) {
+    var found = repository.findById(id);
+    if (found.isPresent()) {
+      customer.setId(id);
+      return repository.save(customer);
+    }
+    return null;
+  }
+
+
 }

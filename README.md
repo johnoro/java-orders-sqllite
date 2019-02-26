@@ -70,7 +70,7 @@ Expose the following end points
 - [ ] POST /orders - adds an order
 - [ ] POST /agents - adds an agent
 
-- [ ] PUT /customers/{id} - updates a customer based on custcode
+- [x] PUT /customers/{id} - updates a customer based on custcode
 - [ ] PUT /orders/{id} - updates an order based on ordnum
 - [ ] PUT /agents/{id} - updates an agent based on ordnum
 
