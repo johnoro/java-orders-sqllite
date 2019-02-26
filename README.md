@@ -60,7 +60,7 @@ Expose the following end points
 
 - [x] GET /customers - returns all the customers
 - [ ] GET /orders - return all the orders
-- [ ] GET /agents - return all the agents
+- [x] GET /agents - return all the agents
 
 - [ ] GET /customers/custcode/{custcode}
 - [ ] GET /orders/ordnum/{ordnum}
