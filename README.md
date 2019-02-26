@@ -59,7 +59,7 @@ The table layouts are as follows
 Expose the following end points
 
 - [x] GET /customers - returns all the customers
-- [ ] GET /orders - return all the orders
+- [x] GET /orders - return all the orders
 - [x] GET /agents - return all the agents
 
 - [ ] GET /customers/custcode/{custcode}
