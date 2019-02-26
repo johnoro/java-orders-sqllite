@@ -16,7 +16,7 @@ Create a REST api server to store and read data from the provided SQLite Databas
 
 The table layouts are as follows
 
-- [ ] AGENTS
+- [x] AGENTS
   * AGENTCODE primary key, not null Long
   * AGENTNAME string
   * WORKINGAREA string
@@ -24,7 +24,7 @@ The table layouts are as follows
   * PHONE string
   * COUNTRY string
 
-- [ ] CUSTOMERS
+- [x] CUSTOMERS
   * CUSTCODE primary key, not null Long
   * CUSTNAME String, not null
   * CUSTCITY String
