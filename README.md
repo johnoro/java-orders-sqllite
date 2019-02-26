@@ -47,7 +47,7 @@ The table layouts are as follows
   * ORDDESCRIPTION
 
 
-- [ ] Create the entities needed to store this data
+- [x] Create the entities needed to store this data
 - [ ] connect to the provided SQLite database orders.db
  
 - [ ] Create a generic error html page to return when error 404 happens (the rate of this depends on the user following directions).

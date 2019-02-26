@@ -1,6 +1,7 @@
 package com.lambdaschool.sqliteorders.models;
 
 import javax.persistence.*;
+import java.util.Set;
 
 @Entity
 @Table(name = "agents")
