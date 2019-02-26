@@ -81,7 +81,7 @@ Expose the following end points
 * /customers/order - Returns all customers with their orders
 * /customers/name/{custname} - Returns all orders for a particular customer based on name
 * /customers/order/{custcode} - Returns all orders for a particular customer based on custcode
-* /agents - Returns all agents with their customers
+* /agents/customers - Returns all agents with their customers
 * /agents/orders - Return a list with the agents name and associated order number and order description
 * /customers/{custcode} - Deletes a customer based off of their custcode and deletes all their associated orders
 * /agents/{agentcode} - Deletes an agent if they are not assigned to a customer or order (Stretch Goal)
