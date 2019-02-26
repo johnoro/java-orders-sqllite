@@ -43,5 +43,13 @@ public class CustomerController {
     return null;
   }
 
-
+  @DeleteMapping("{id}")
+  public Customer delete(@PathVariable Long id) {
+    var found = repository.findById(id);
+    if (found.isPresent()) {
+      repository.deleteById(id);
+      return found.get();
+    }
+    return null;
+  }
 }

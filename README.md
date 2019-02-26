@@ -74,17 +74,15 @@ Expose the following end points
 - [ ] PUT /orders/{id} - updates an order based on ordnum
 - [ ] PUT /agents/{id} - updates an agent based on ordnum
 
-- [ ] DELETE /customers/{id} - Deletes a customer based off of their custcode and deletes all their associated orders
+- [x] DELETE /customers/{id} - Deletes a customer based off of their custcode and deletes all their associated orders
 - [ ] DELETE /orders/{id} - deletes an order based off its ordnum
-- [ ] DELETE /agents/{id} - Deletes an agent if they are not assigned to a customer or order (Stretch Goal)
+- [ ] DELETE /agents/{id} - Deletes an agent *if they are not assigned to a customer or order* (Stretch Goal)
 
 - [ ] GET /customers/orders - Returns all customers with their orders
 - [ ] GET /customers/{name} - Returns all orders for a particular customer based on name
 - [ ] GET /customers/{id}/orders - Returns all orders for a particular customer based on custcode
 - [ ] GET /agents/customers - Returns all agents with their customers
 - [ ] GET /agents/orders - Return a list with the agents name and associated order number and order description
-- [ ] DELETE /customers/{id} - Deletes a customer based off of their custcode and deletes all their associated orders
-- [ ] DELETE /agents/{id} - Deletes an agent *if they are not assigned to a customer or order* (Stretch Goal)
 
 * Expose at least the following the actuator endpoints to help with system mangagement
    - [ ] /health
