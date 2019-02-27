@@ -1,12 +1,14 @@
 package com.lambdaschool.sqliteorders.controllers;
 
 import com.lambdaschool.sqliteorders.models.Customer;
+import com.lambdaschool.sqliteorders.models.Order;
 import com.lambdaschool.sqliteorders.repositories.CustomerRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Set;
 
 @RestController
 @RequestMapping(path = "customers", produces = MediaType.APPLICATION_JSON_VALUE)
@@ -27,6 +29,19 @@ public class CustomerController {
       return found.get();
     }
     return null;
+  }
+
+  @GetMapping("{name}/orders")
+  public Set<Order> ordersByName(@PathVariable String name) {
+    name = name.substring(0, 1).toUpperCase()
+      + name.substring(1).toLowerCase();
+    var customer = repository.findByName(name);
+
+    if (customer == null) {
+        return null;
+    }
+
+    return customer.getOrders();
   }
 
   @PostMapping("")

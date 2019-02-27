@@ -79,14 +79,14 @@ Expose the following end points
 - [ ] DELETE /agents/{id} - Deletes an agent *if they are not assigned to a customer or order* (Stretch Goal)
 
 - [x] GET /customers/orders - Returns all customers with their orders
-- [ ] GET /customers/{name}/orders - Returns all orders for a particular customer based on name
+- [x] GET /customers/{name}/orders - Returns all orders for a particular customer based on name
 - [ ] GET /customers/{id}/orders - Returns all orders for a particular customer based on custcode
-- [ ] GET /agents/customers - Returns all agents with their customers
+- [x] GET /agents/customers - Returns all agents with their customers
 - [x] GET /agents/orders - Return a list with the agents name and associated order number and order description
 
 * Expose at least the following the actuator endpoints to help with system mangagement
-   - [ ] /health
-   - [ ] /inf
-   - [ ] /metrics
+   - [x] /health
+   - [x] /info
+   - [x] /metrics
    
 - [ ] Stretch goal - update each of these three actuator endpoints to report your own messages. 
