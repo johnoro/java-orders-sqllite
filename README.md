@@ -63,8 +63,8 @@ Expose the following end points
 - [x] GET /agents - return all the agents
 
 - [x] GET /customers/{id}
-- [ ] GET /orders/{id}
-- [ ] GET /agents/{id}
+- [x] GET /orders/{id}
+- [x] GET /agents/{id}
 
 - [x] POST /customers - adds a customer
 - [ ] POST /orders - adds an order
