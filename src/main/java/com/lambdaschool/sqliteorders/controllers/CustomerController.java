@@ -14,6 +14,7 @@ public class CustomerController {
   @Autowired
   CustomerRepository repository;
 
+  // comes with orders
   @GetMapping("")
   public List<Customer> all() {
     return repository.findAll();

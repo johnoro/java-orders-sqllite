@@ -1,7 +1,5 @@
 package com.lambdaschool.sqliteorders.models;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
-
 import javax.persistence.*;
 import java.util.Set;
 
@@ -42,10 +40,10 @@ public class Customer {
 
   @ManyToOne
   @JoinColumn(name = "agentcode", nullable = false)
-  @JsonIgnore
   private Agent agent;
 
   @OneToMany(cascade = CascadeType.REMOVE, mappedBy = "customer")
+  // @JsonIgnore
   private Set<Order> orders;
 
   public Customer() {}
