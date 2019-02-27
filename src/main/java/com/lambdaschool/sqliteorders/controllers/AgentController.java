@@ -4,10 +4,7 @@ import com.lambdaschool.sqliteorders.models.Agent;
 import com.lambdaschool.sqliteorders.repositories.AgentRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -29,5 +26,10 @@ public class AgentController {
       return found.get();
     }
     return null;
+  }
+
+  @PostMapping("")
+  public Agent add(@RequestBody Agent agent) {
+    return repository.save(agent);
   }
 }

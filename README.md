@@ -67,8 +67,8 @@ Expose the following end points
 - [x] GET /agents/{id}
 
 - [x] POST /customers - adds a customer
-- [ ] POST /orders - adds an order
-- [ ] POST /agents - adds an agent
+- [x] POST /orders - adds an order
+- [x] POST /agents - adds an agent
 
 - [x] PUT /customers/{id} - updates a customer based on custcode
 - [ ] PUT /orders/{id} - updates an order based on ordnum
