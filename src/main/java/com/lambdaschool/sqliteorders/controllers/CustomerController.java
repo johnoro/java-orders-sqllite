@@ -31,7 +31,7 @@ public class CustomerController {
     return null;
   }
 
-  @GetMapping("{name}/orders")
+  @GetMapping("name/{name}/orders")
   public Set<Order> ordersByName(@PathVariable String name) {
     name = name.substring(0, 1).toUpperCase()
       + name.substring(1).toLowerCase();
@@ -42,6 +42,15 @@ public class CustomerController {
     }
 
     return customer.getOrders();
+  }
+
+  @GetMapping("id/{id}/orders")
+  public Set<Order> ordersById(@PathVariable Long id) {
+    var customer = repository.findById(id);
+    if (customer.isPresent()) {
+      return customer.get().getOrders();
+    }
+    return null;
   }
 
   @PostMapping("")
