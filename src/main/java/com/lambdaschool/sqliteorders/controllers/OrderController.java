@@ -42,4 +42,15 @@ public class OrderController {
     }
     return null;
   }
+
+  @DeleteMapping("{id}")
+  public Order delete(@PathVariable Long id) {
+    var found = repository.findById(id);
+    if (found.isPresent()) {
+      repository.deleteById(id);
+      return found.get();
+    }
+    return null;
+  }
+
 }

@@ -42,4 +42,14 @@ public class AgentController {
     }
     return null;
   }
+
+  @DeleteMapping("{id}")
+  public Agent delete(@PathVariable Long id) {
+    var found = repository.findById(id);
+    if (found.isPresent()) {
+      repository.deleteById(id);
+      return found.get();
+    }
+    return null;
+  }
 }
