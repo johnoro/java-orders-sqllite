@@ -89,4 +89,4 @@ Expose the following end points
    - [x] /info
    - [x] /metrics
    
-- [ ] Stretch goal - update each of these three actuator endpoints to report your own messages. 
+- [x] Stretch goal - update each of these three actuator endpoints to report your own messages. 
