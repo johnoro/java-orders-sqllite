@@ -47,8 +47,17 @@ public class AgentController {
   public Agent delete(@PathVariable Long id) {
     var found = repository.findById(id);
     if (found.isPresent()) {
+      Agent agent = found.get();
+
+      if (
+        agent.getOrders().isEmpty() ||
+        agent.getCustomers().isEmpty()
+      ) {
+        return null;
+      }
+
       repository.deleteById(id);
-      return found.get();
+      return agent;
     }
     return null;
   }

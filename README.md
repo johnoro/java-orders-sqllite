@@ -76,7 +76,7 @@ Expose the following end points
 
 - [x] DELETE /customers/{id} - Deletes a customer based off of their custcode and deletes all their associated orders
 - [x] DELETE /orders/{id} - deletes an order based off its ordnum
-- [x] DELETE /agents/{id} - Deletes an agent *if they are not assigned to a customer or order* (Stretch Goal)
+- [x] DELETE /agents/{id} - Deletes an agent *if they are not assigned to a customer or order* (Stretch Goal-- Complete)
 
 - [x] GET /customers/orders - Returns all customers with their orders
 - [x] GET /customers/name/{name}/orders - Returns all orders for a particular customer based on name
