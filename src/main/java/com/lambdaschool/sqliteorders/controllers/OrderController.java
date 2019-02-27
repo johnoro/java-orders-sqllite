@@ -32,4 +32,14 @@ public class OrderController {
   public Order add(@RequestBody Order order) {
     return repository.save(order);
   }
+
+  @PutMapping("{id}")
+  public Order update(@RequestBody Order order, @PathVariable Long id) {
+    var found = repository.findById(id);
+    if (found.isPresent()) {
+      order.setId(id);
+      return repository.save(order);
+    }
+    return null;
+  }
 }

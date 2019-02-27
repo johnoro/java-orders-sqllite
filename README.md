@@ -71,8 +71,8 @@ Expose the following end points
 - [x] POST /agents - adds an agent
 
 - [x] PUT /customers/{id} - updates a customer based on custcode
-- [ ] PUT /orders/{id} - updates an order based on ordnum
-- [ ] PUT /agents/{id} - updates an agent based on ordnum
+- [x] PUT /orders/{id} - updates an order based on ordnum
+- [x] PUT /agents/{id} - updates an agent based on ordnum
 
 - [x] DELETE /customers/{id} - Deletes a customer based off of their custcode and deletes all their associated orders
 - [ ] DELETE /orders/{id} - deletes an order based off its ordnum
