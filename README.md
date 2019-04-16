@@ -10,13 +10,13 @@ Create a REST api server to store and read data from the provided SQLite Databas
 
 * Convert to using SQLite
 * Add additional end points
-  * change end points so they return null when no data is found.
-  * change end points so they return data that is deleted or a new copy of updated data
+  - change end points so they return null when no data is found.
+  - change end points so they return data that is deleted or a new copy of updated data
 * Expose actuator end points
 
 The table layouts are as follows
 
-* AGENTS
+- [x] AGENTS
   * AGENTCODE primary key, not null Long
   * AGENTNAME string
   * WORKINGAREA string
@@ -24,7 +24,7 @@ The table layouts are as follows
   * PHONE string
   * COUNTRY string
 
-* CUSTOMERS
+- [x] CUSTOMERS
   * CUSTCODE primary key, not null Long
   * CUSTNAME String, not null
   * CUSTCITY String
@@ -38,7 +38,7 @@ The table layouts are as follows
   * PHONE String
   * AGENTCODE long foreign key (one agent to many customers) not null
 
-* ORDERS
+- [x] ORDERS
   * ORDNUM primary key, not null Long
   * ORDAMOUNT double
   * ADVANCEAMOUNT double
@@ -47,48 +47,46 @@ The table layouts are as follows
   * ORDDESCRIPTION
 
 
-* Create the entities needed to store this data
-* connect to the provided SQLite database orders.db
+- [x] Create the entities needed to store this data
+- [x] connect to the provided SQLite database orders.db
  
-* Create a generic error html page to return when error 404 happens (the rate of this depends on the user following directions).
-* Create a different generic error html page to return when error 500 happens (this should be rare).
-* Create a different generic error html page to return when an error other than a 404 or 500 happens (what? This should not happen).
+- [x] Create a generic error html page to return when error 404 happens (the rate of this depends on the user following directions).
+- [x] Create a different generic error html page to return when error 500 happens (this should be rare).
+- [x] Create a different generic error html page to return when an error other than a 404 or 500 happens (what? This should not happen).
 
-* End points should return the data they worked with or nothing if no data was found
+- End points should return the data they worked with or nothing if no data was found
 
 Expose the following end points
 
-* GET /customers - returns all the customer
-* GET /orders - return all the orders
-* GET /agents - return all the agents
+- [x] GET /customers - returns all the customers
+- [x] GET /orders - return all the orders
+- [x] GET /agents - return all the agents
 
-* GET /customers/custcode/{custcode}
-* GET /orders/ordnum/{ordnum}
-* GET /agents/agentcode/{agentcode}
+- [x] GET /customers/{id}
+- [x] GET /orders/{id}
+- [x] GET /agents/{id}
 
-* POST /customers - adds a customer
-* POST /orders - adds an order
-* POST /agents - adds an agent
+- [x] POST /customers - adds a customer
+- [x] POST /orders - adds an order
+- [x] POST /agents - adds an agent
 
-* PUT /customers/custocode/{custcode} - updates a customer based on custcode
-* PUT /orders/ordnum/{ordnum} - updates an order based on ordnum
-* PUT /agents/agentcode/{agentcode} - updates an agent based on ordnum
+- [x] PUT /customers/{id} - updates a customer based on custcode
+- [x] PUT /orders/{id} - updates an order based on ordnum
+- [x] PUT /agents/{id} - updates an agent based on ordnum
 
-* DELETE /customers/custcode/{custcode} - Deletes a customer based off of their custcode and deletes all their associated orders
-* DELETE /orders/ordnum/{ordnum} - deletes an order based off its ordnum
-* DELETE agents/agentcode/{agentcode} - Deletes an agent if they are not assigned to a customer or order (Stretch Goal)
+- [x] DELETE /customers/{id} - Deletes a customer based off of their custcode and deletes all their associated orders
+- [x] DELETE /orders/{id} - deletes an order based off its ordnum
+- [x] DELETE /agents/{id} - Deletes an agent *if they are not assigned to a customer or order* (Stretch Goal-- Complete)
 
-* /customers/order - Returns all customers with their orders
-* /customers/name/{custname} - Returns all orders for a particular customer based on name
-* /customers/order/{custcode} - Returns all orders for a particular customer based on custcode
-* /agents - Returns all agents with their customers
-* /agents/orders - Return a list with the agents name and associated order number and order description
-* /customers/{custcode} - Deletes a customer based off of their custcode and deletes all their associated orders
-* /agents/{agentcode} - Deletes an agent if they are not assigned to a customer or order (Stretch Goal)
+- [x] GET /customers/orders - Returns all customers with their orders
+- [x] GET /customers/name/{name}/orders - Returns all orders for a particular customer based on name
+- [x] GET /customers/id/{id}/orders - Returns all orders for a particular customer based on custcode
+- [x] GET /agents/customers - Returns all agents with their customers
+- [x] GET /agents/orders - Return a list with the agents name and associated order number and order description
 
 * Expose at least the following the actuator endpoints to help with system mangagement
-   * /health
-   * /inf
-   * /metrics
+   - [x] /health
+   - [x] /info
+   - [x] /metrics
    
-   * Stretch goal - update each of these three actuator endpoints to report your own messages. 
+- [x] Stretch goal - update each of these three actuator endpoints to report your own messages. 
